@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure Access</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+  font-family: "Titling Gothic FB Black", "Arial Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e6e6e6;
+}
+
+.card {
+  width: 340px;
+  padding: 42px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 35px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+}
+
+p {
+  font-size: 11px;
+  opacity: 0.55;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Titling Gothic FB Black", "Arial Black", sans-serif;
+}
+
+input:focus {
+  border-color: rgba(255,255,255,0.35);
+}
+
+button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: "Titling Gothic FB Black", "Arial Black", sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: #d9d9d9;
+}
+
+#content {
+  display: none;
+  margin-top: 18px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+a button {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+a button:hover {
+  border-color: rgba(255,255,255,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>CLASSIFIED ACCESS</h2>
+  <p>restricted entry protocol</p>
+
+  <input type="password" id="pass" placeholder="enter key">
+  <button onclick="check()">AUTHENTICATE</button>
+
+  <div id="content">
+    <p>access granted</p>
+    <a href="https://daiyaze.com/vip" target="_blank">
+      <button>OPEN SECURE GALLERY</button>
+    </a>
+  </div>
+</div>
+
+<script>
+function check() {
+  var password = "DAIYAZEVIP";
+  var input = document.getElementById("pass").value;
+
+  if(input === password){
+    document.getElementById("content").style.display = "block";
+  } else {
+    alert("authentication failed");
+  }
+}
+</script>
+
+</body>
+</html>
