@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Secure Access</title>
 
+<!-- 🔥 FUENTE PREMIUM SIMILAR -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -13,67 +20,71 @@ body {
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-  font-family: "Titling Gothic FB Black", "Arial Black", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #e6e6e6;
 }
 
+/* CARD */
 .card {
   width: 100%;
-  max-width: 340px;
-  padding: 42px;
+  max-width: 380px;
+  padding: 40px 28px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 35px rgba(0,0,0,0.7);
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
   text-align: center;
 }
 
+/* TITULO */
 h2 {
-  font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 8px;
-  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
 }
 
+/* SUBTEXTO */
 p {
   font-size: 11px;
-  opacity: 0.55;
+  opacity: 0.6;
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
+/* INPUT */
 input {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 8px;
   color: white;
   outline: none;
   text-align: center;
   letter-spacing: 3px;
-  font-family: "Titling Gothic FB Black", "Arial Black", sans-serif;
+  font-size: 14px;
 }
 
 input:focus {
-  border-color: rgba(255,255,255,0.35);
+  border-color: rgba(255,255,255,0.5);
 }
 
+/* BOTÓN PRINCIPAL */
 button {
   margin-top: 18px;
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: white;
   border: none;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: background 0.2s ease;
-  font-family: "Titling Gothic FB Black", "Arial Black", sans-serif;
+  transition: all 0.2s ease;
   text-transform: uppercase;
 }
 
@@ -81,43 +92,35 @@ button:hover {
   background: #d9d9d9;
 }
 
+/* CONTENIDO */
 #content {
   display: none;
-  margin-top: 18px;
-  font-size: 11px;
-  opacity: 0.8;
+  margin-top: 20px;
 }
 
+/* BOTÓN SECUNDARIO */
 a button {
-  margin-top: 12px;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
   color: white;
 }
 
 a button:hover {
-  border-color: rgba(255,255,255,0.6);
+  border-color: rgba(255,255,255,0.7);
 }
 
-/* 🔥 FIX REAL PARA MÓVIL */
+/* 🔥 MOBILE PERFECTO */
 @media (max-width: 600px) {
   body {
-    align-items: flex-start;
-    padding: 80px 16px 20px;
+    padding: 20px;
   }
 
   .card {
-    width: 100%;
-    max-width: none;
-    padding: 30px 20px;
+    padding: 32px 20px;
   }
 
   h2 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   input, button {
@@ -131,14 +134,13 @@ a button:hover {
 <body>
 
 <div class="card">
-  <h2>CLASSIFIED ACCESS</h2>
-  <p>restricted entry protocol</p>
+  <h2>ACCESS THE VIP GALLERY</h2>
+  <p>RESTRICTED ENTRY PROTOCOL</p>
 
-  <input type="password" id="pass" placeholder="enter key">
+  <input type="password" id="pass" placeholder="ENTER KEY">
   <button onclick="check()">AUTHENTICATE</button>
 
   <div id="content">
-    <p>access granted</p>
     <a href="https://daiyaze.com/vip" target="_blank">
       <button>OPEN SECURE GALLERY</button>
     </a>
@@ -153,7 +155,7 @@ function check() {
   if(input === password){
     document.getElementById("content").style.display = "block";
   } else {
-    alert("authentication failed");
+    alert("AUTHENTICATION FAILED");
   }
 }
 </script>
